@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+    background: #0a0f15;
+    color: #d1d7e0;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+h1 {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00e6b8;
+    margin-top: 10px;
+}
+
+p {
+    color: #00e6b8;
+}
+
+/* Game Logo */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+header .game-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Canvas Styling */
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    background: #000;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px #00e6b8;
+}
+
+/* Control Buttons */
+#controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#controls button {
+    background: #00ffcc;
+    border: 2px solid #004d40;
+    color: #000;
+    font-size: 1.5rem;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00e6b8;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#controls button:hover {
+    background: #004d40;
+    color: #fff;
+}
+
+#controls #fire-btn {
+    background: #ff1744;
+    box-shadow: 0 0 10px #ff4081;
+}
+
+#controls #fire-btn:hover {
+    background: #c51162;
+}
+
+/* Win Message */
+#win-message {
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 20px #00e6b8;
+}
+
+#win-message h2 {
+    font-size: 2.5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 15px #00e6b8;
+}
+
+#win-message .btn {
+    background: linear-gradient(45deg, #00ffcc, #00bfa5);
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#win-message .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00e6b8, 0 0 30px #00ffcc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Binary animation */
+.binary-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.binary-animation span {
+    position: absolute;
+    font-size: 16px;
+    color: #00ffcc;
+    animation: drop 3s infinite;
+    opacity: 0.8;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110%);
+        opacity: 0;
+    }
+}
